@@ -1,6 +1,6 @@
 window.onload = function(){
-	var date = new Date();
-	document.cookie = "isDing=true";
+	//var date = new Date();
+	//document.cookie = "isDing=true";
 	var allCookie = document.cookie;
 	if(allCookie === ""){
 		doDing();
@@ -12,7 +12,7 @@ window.onload = function(){
 	var value;
 	var temp;
 	for(var i=0; i < cookies.length; i++){
-		temp = cookies.split("=");
+		temp = cookies[i].split("=");
 		uname = temp[0];
 		value = temp[1];
 		if(uname === "isDing" && value === "true"){
