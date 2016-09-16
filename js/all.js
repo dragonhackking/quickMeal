@@ -8,9 +8,9 @@ window.onload = function(){
 	}
 
 	var cookies = allCookie.split("; ");
-	var uname = "";
-	var value = "";
-	var temp = "";
+	var uname;
+	var value;
+	var temp;
 	for(var i=0; i < cookies.length; i++){
 		temp = cookies.split("=");
 		uname = temp[0];
