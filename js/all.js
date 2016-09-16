@@ -1,6 +1,4 @@
 window.onload = function(){
-	//var date = new Date();
-	//document.cookie = "isDing=true";
 	var allCookie = document.cookie;
 	if(allCookie === ""){
 		doDing();
@@ -22,15 +20,14 @@ window.onload = function(){
 	doDing();
 }
 
-function setCookie(uname, value, date, expires){
-
-}
-
-function isExistCookie(){
-
-}
-
 function doDing(){
 	alert("haha");
-	document.cookie = "isDing=true";
+	setCookie("isDing", "true");
+}
+
+/**
+ * 在此setCookie只用name,value属性.
+ */
+function setCookie(name, value){
+	document.cookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
 }
