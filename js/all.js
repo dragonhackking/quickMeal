@@ -1,6 +1,6 @@
 window.onload = function(){
 	var date = new Date();
-	document.cookie = "isDing=true; expries="+date.toGMTString()+"path=/";
+	document.cookie = "isDing=true";
 	var allCookie = document.cookie;
 	if(allCookie === ""){
 		doDing();
