@@ -10,9 +10,11 @@ window.onload = function(){
 	var cookies = allCookie.split("; ");
 	var uname = "";
 	var value = "";
+	var temp = "";
 	for(var i=0; i < cookies.length; i++){
-		uname = cookies[i].substring(0, indexOf(cookies[i], "="));
-		value = cookies[i].substring(indexOf(cookies[i], "=")+1);
+		temp = cookies.split("=");
+		uname = temp[0];
+		value = temp[1];
 		if(uname === "isDing" && value === "true"){
 			return;
 		}
